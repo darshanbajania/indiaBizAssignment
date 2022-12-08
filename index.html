@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+</head>
+
+<body style="background-color: #f7f7f7;">
+
+
+    <section class="container">
+        <h1 style="text-align: center">Assigment</h1>
+        <div style="margin: 0 auto;  margin-top: 4em;">
+            <div id="content-form" class="content-form"
+                style="width: 600px; margin: 0 auto; border-radius: 10px; background-color: white; padding: 1.5em;">
+                <form id="details_form" method="post">
+
+                    <div>
+                        <h3 style="color: #e95e50;">Business Interests</h3>
+                        <div style="display: flex;" class="mt-3">
+
+                            <p style="width: 120px;">Activities<span style="color: red;">*</span></p>
+                            <div style="display: flex; margin-left: 20px; flex-wrap: wrap;">
+                                <div class="form-check" style="margin-right: 20px;">
+                                    <input class="form-check-input" type="checkbox" value="Buy" id="defaultCheck1"
+                                        name="activity">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Buy
+                                    </label>
+                                </div>
+                                <div class="form-check" style="margin-right: 20px;">
+                                    <input class="form-check-input" type="checkbox" value="Invest" id="defaultCheck2"
+                                        name="activity">
+                                    <label class="form-check-label" for="defaultCheck2">
+                                        Invest
+                                    </label>
+                                </div>
+                                <div class="form-check" style="margin-right: 20px;">
+                                    <input class="form-check-input" type="checkbox" value="Partner" id="defaultCheck3"
+                                        name="activity">
+                                    <label class="form-check-label" for="defaultCheck3">
+                                        Partner
+                                    </label>
+                                </div>
+                                <div class="form-check" style="margin-right: 20px;">
+                                    <input class="form-check-input" type="checkbox" value="Lease" id="defaultCheck4"
+                                        name="activity">
+                                    <label class="form-check-label" for="defaultCheck4">
+                                        Lease
+                                    </label>
+                                </div>
+                                <div class="form-check" style="margin-right: 20px;">
+                                    <input class="form-check-input" type="checkbox" value="Franchise" id="defaultCheck5"
+                                        name="activity">
+                                    <label class="form-check-label" for="defaultCheck5">
+                                        Franchise
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center;" class="mt-3">
+
+                            <p style="margin: 0; width: 120px;">Industries<span style="color: red;">*</span></p>
+                            <div style="display: flex; margin-left: 20px;">
+                                <select id="industries" class="form-select" aria-label="Default select example"
+                                    required>
+                                    <option value="">Select</option>
+                                    <option value="Agriculture">Agriculture</option>
+                                    <option value="Defence">Defence</option>
+                                    <option value="Hotel & Restaurant">Hotel & Restaurant</option>
+                                    <option value="Logistics">Logistics</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div style="display: flex; " class="mt-4">
+
+                            <p style="margin: 0; width: 120px;">Location<span style="color: red;">*</span></p>
+                            <div style="display: flex; margin-left: 20px; width: 50%;">
+                                <select id="location" style="width: 350px; " class="form-select"
+                                    aria-label="Default select example" multiple required>
+                                    <option value="Agriculture">Agriculture</option>
+                                    <option value="Defence">Defence</option>
+                                    <option value="Hotel & Restaurant">Hotel & Restaurant</option>
+                                    <option value="Logistics">Logistics</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <h3 style="color: #e95e50;">Financial</h3>
+                        <div style="display: flex;" class="mt-3">
+
+                            <p style="width: 125px;">Funding Source<span style="color: red;">*</span></p>
+                            <div style=" margin-left: 15px;">
+                                <div class="form-check" style="margin-right: 20px;">
+                                    <input class="form-check-input" type="radio" name="investment-type" value="Own"
+                                        id="fundingSource1" required>
+                                    <label class="form-check-label" for="fundingSource1">
+                                        Own
+                                    </label>
+                                </div>
+                                <div class="form-check" style="margin-right: 20px;">
+                                    <input class="form-check-input" type="radio" name="investment-type"
+                                        value="Family & Friends" id="fundingSource2">
+                                    <label class="form-check-label" for="fundingSource2">
+                                        Family & Friends
+                                    </label>
+                                </div>
+                                <div class="form-check" style="margin-right: 20px;">
+                                    <input class="form-check-input" type="radio" name="investment-type"
+                                        value="Bank Loans" id="fundingSource3">
+                                    <label class="form-check-label" for="fundingSource3">
+                                        Bank Loans
+                                    </label>
+                                </div>
+                                <div class="form-check" style="margin-right: 20px;">
+                                    <input class="form-check-input" type="radio" name="investment-type"
+                                        value="External Investors" id="fundingSource4">
+                                    <label class="form-check-label" for="fundingSource4">
+                                        External Investors
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center;" class="mt-3">
+
+                            <label for="Budget" style="margin: 0; width: 120px;" class="form-label">Budget<span
+                                    style="color: red;">*</span></label>
+                            <div>
+                                <div style="margin-left: 20px;">
+                                    <input type="text" class="form-control" id="Budget" placeholder="1 crore" required>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div style="display: flex; " class="mt-4">
+
+                            <p style="margin: 0; width: 100px;">Location</p>
+                            <div style="display: flex; margin-left: 20px;">
+                                <select class="form-select" aria-label="Default select example" multiple>
+                                    <option selected>Select</option>
+                                    <option value="1">Agriculture</option>
+                                    <option value="2">Defence</option>
+                                    <option value="3">Hotel & Restaurant</option>
+                                    <option value="4">Logistics</option>
+
+                                </select>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="mt-5">
+                        <h3 style="color: #e95e50;">Personal</h3>
+
+
+                        <div style="display: flex; align-items: center;" class="mt-3">
+
+                            <label for="fullname" style="margin: 0; width: 120px;" class="form-label">Name<span
+                                    style="color: red;">*</span></label>
+
+                            <div style="margin-left: 20px; width: 50%;">
+                                <input type="text" class="form-control" id="fullname" placeholder="Full name" required>
+                            </div>
+
+                        </div>
+
+                        <div style="display: flex; align-items: center;" class="mt-3">
+
+                            <label for="mobile" style="margin: 0; width: 120px;" class="form-label">Mobile<span
+                                    style="color: red;">*</span></label>
+
+                            <div style="margin-left: 20px; width: 50%;">
+                                <input type="tel" class="form-control" id="mobile" maxlength="10"
+                                    placeholder="XXXXXXXXXX" required>
+                            </div>
+
+                        </div>
+                        <div style="display: flex; align-items: center;" class="mt-3">
+
+                            <label for="zip_code" style="margin: 0; width: 120px;" class="form-label">Zip Code<span
+                                    style="color: red;">*</span></label>
+
+                            <div style="margin-left: 20px; width: 50%;">
+                                <input type="number" maxlength="6" class="form-control" id="zip_code"
+                                    placeholder="xxx xxx" required>
+                            </div>
+
+                        </div>
+                        <div style="display: flex; align-items: center;" class="mt-3">
+
+                            <label for="profilePic" style="margin: 0; width: 120px;" class="form-label">Profile
+                                Pic<span style="color: red;">*</span></label>
+
+                            <div style="margin-left: 20px; width: 50%;">
+                                <input id="profile_pic" type="file" class="form-control" id="profilePic" required>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <h3 style="color: #e95e50;">Professional</h3>
+
+
+                        <div style="display: flex; align-items: center;" class="mt-3">
+
+                            <label for="componyname" style="margin: 0; width: 125px;" class="form-label">Company
+                                Name</label>
+
+                            <div style="margin-left: 15px; width: 50%;">
+                                <input id="companyName" type="text" class="form-control" id="companyname"
+                                    placeholder="Company Name">
+                            </div>
+
+                        </div>
+                        <div style="display: flex; align-items: center;" class="mt-3">
+
+                            <label for="mobile" style="margin: 0; width: 120px;" class="form-label">Skills<span
+                                    style="color: red;">*</span></label>
+
+                            <div style="margin-left: 20px; width: 80%;">
+                                <div class="wrapper">
+
+                                    <div class="content">
+                                        <p>Press space after each tag</p>
+                                        <ul><input id="skills" type="text" spellcheck="false"></ul>
+                                    </div>
+                                    <div class="details">
+                                        <p><span>10</span> tags are remaining</p>
+                                        <button>Remove All</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="form-buttons mt-3">
+
+                        <button type="submit" class="preview-delete-button">Preview</button>
+                    </div>
+                </form>
+            </div>
+            <div id="preview" class="preview">
+                <div class="preview-buttons" style="display: flex; justify-content: flex-end;">
+                    <button onclick="hidePreview()" class="preview-edit-button">Edit</button>
+                    <button onclick="resetForm()" class="preview-delete-button">Delete</button>
+                </div>
+                <div
+                    style="background-color: white; border-radius: 10px; position: relative; padding: 2em; padding-top: 8em;">
+                    <div style="position: absolute; top: -60px; width: 100%; display: flex; justify-content: center; ">
+                        <div>
+
+                            <img id="profilePicPreview" src="./profile.jpg"
+                                style="width: 120px; height: 120px; object-fit: cover; border-radius: 80px; border: 4px solid white;"
+                                alt="profile-pic" />
+                            <p id="fullNamePreview" class="mt-2"
+                                style="text-align: center; font-weight: 700; color: #415262; font-size: 1.2em;">Bhavin
+                                Bhagat
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h3 class="mb-3" style="font-size: 1.2em; color: #e95e50;">Business Interests</h3>
+                            <div class="mt-2" style="display: flex;">
+
+                                <p style="color: grey; margin: 0;">Activities </p>
+                                <p id="activityPreviewValue" style="margin-left: 10px; margin-bottom: 0;">Buy, Invest,
+                                    Partner,
+                                    Lease</p>
+                            </div>
+
+                            <div class="mt-2" style="display: flex;">
+
+                                <p style="color: grey; margin-bottom: 0;">Industries</p>
+                                <p id="industriesPreviewValue" style="margin-left: 10px; margin-bottom: 0;">Hotel &
+                                    Restaurant</p>
+                            </div>
+                            <div class="mt-2" style="display: flex;">
+
+                                <p style="color: grey; margin-bottom: 0;">Location</p>
+                                <p id="locationPreviewValue" style="margin-left: 10px; margin-bottom: 0;">Chennai Dehi,
+                                    Kolkata, Mumbai</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3 class="mb-3" style="font-size: 1.2em; color: #e95e50;">Personal</h3>
+                            <div class="mt-2" style="display: flex;">
+
+                                <p style="color: grey; margin: 0;">Mobile </p>
+                                <p id="mobilePreview" style="margin-left: 10px; margin-bottom: 0;">+91 213 123 1311</p>
+                            </div>
+
+                            <div class="mt-2" style="display: flex;">
+
+                                <p style="color: grey; margin-bottom: 0;">Zip Code</p>
+                                <p id="zipCodePreview" style="margin-left: 10px; margin-bottom: 0;">123 123</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-lg-6">
+                            <h3 class="mb-3" style="font-size: 1.2em; color: #e95e50;">Financial</h3>
+                            <div class="mt-2" style="display: flex;">
+
+                                <p style="color: grey; margin: 0; width: 120px;">Funding Source </p>
+                                <p id="fundingSourcePreview" style="margin-left: 10px; margin-bottom: 0;">Own Family and
+                                    Friends</p>
+                            </div>
+
+                            <div class="mt-2" style="display: flex;">
+
+                                <p style="color: grey; margin-bottom: 0; width: 120px;">Budget</p>
+                                <p id="budgetPreview" style="margin-left: 10px; margin-bottom: 0;">1 crore to 2 crores
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6">
+                            <h3 class="mb-3" style="font-size: 1.2em; color: #e95e50;">Professional</h3>
+                            <div class="mt-2" style="display: flex;">
+
+                                <p style="color: grey; margin: 0;">Company Name</p>
+                                <p id="companyNamePreview" style="margin-left: 10px; margin-bottom: 0;">ABC Company</p>
+                            </div>
+
+                            <div class="mt-2" style="display: flex;">
+
+                                <p style="color: grey; margin-bottom: 0;">Skills</p>
+                                <p id="skillPreview" style="margin-left: 10px; margin-bottom: 0;">Marketing,
+                                    Electronics, Culinary</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var contentForm = document.getElementById("content-form");
+        var preview = document.getElementById("preview");
+        var details_form = document.getElementById('details_form')
+        var profile_pic = document.getElementById('profile_pic')
+
+        $(window).ready(function () {
+            $("details_form").on("keypress", function (event) {
+                console.log("aaya");
+                var keyPressed = event.keyCode || event.which;
+                if (keyPressed === 13) {
+                    alert("You pressed the Enter key!!");
+                    event.preventDefault();
+                    return false;
+                }
+            });
+        });
+
+        const ul = document.querySelector("ul"),
+            input = document.getElementById("skills")
+        tagNumb = document.querySelector(".details span");
+
+
+        let maxTags = 10,
+            tags = ["Python", "Java"];
+        countTags();
+        createTag();
+
+        function countTags() {
+
+            tagNumb.innerText = maxTags - tags.length;
+        }
+        function createTag() {
+            ul.querySelectorAll("li").forEach(li => li.remove());
+            tags.slice().reverse().forEach(tag => {
+                let liTag = `<li>${tag} <i class="uit uit-multiply" onclick="remove(this, '${tag}')"></i></li>`;
+                ul.insertAdjacentHTML("afterbegin", liTag);
+            });
+            countTags();
+        }
+        function remove(element, tag) {
+            let index = tags.indexOf(tag);
+            tags = [...tags.slice(0, index), ...tags.slice(index + 1)];
+            element.parentElement.remove();
+            countTags();
+        }
+        function addTag(e) {
+            if (e.key === ' ') {
+                let tag = e.target.value.replace(/\s+/g, ' ');
+                if (tag.length > 1 && !tags.includes(tag)) {
+                    if (tags.length < 10) {
+                        tag.split(',').forEach(tag => {
+                            tags.push(tag);
+                            createTag();
+                        });
+                    }
+                }
+                e.target.value = "";
+            }
+        }
+        input.addEventListener("keyup", addTag);
+        const removeBtn = document.querySelector(".details button");
+        removeBtn.addEventListener("click", () => {
+            tags.length = 0;
+            ul.querySelectorAll("li").forEach(li => li.remove());
+            countTags();
+        });
+
+        profile_pic.addEventListener("change", function () {
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+                const uploaded_image = reader.result;
+                document.getElementById('profilePicPreview').src = uploaded_image;
+            });
+            reader.readAsDataURL(this.files[0]);
+        });
+
+        details_form.addEventListener('submit', e => {
+            e.preventDefault();
+            console.log(e.keypress)
+
+            showPreview();
+        });
+        function handleActivities() {
+            var activity1 = document.getElementById("defaultCheck1")
+            var activity2 = document.getElementById("defaultCheck2")
+            var activity3 = document.getElementById("defaultCheck3")
+            var activity4 = document.getElementById("defaultCheck4")
+            var activity5 = document.getElementById("defaultCheck5")
+
+
+            var activityPreviewValue = document.getElementById("activityPreviewValue")
+            let tempActivityValue = ''
+            activity1.required = "true"
+            if (activity1.checked || activity2.checked || activity3.checked || activity4.checked || activity5.checked) {
+                activity1.required = "false"
+
+            }
+            else {
+                alert("please choose any activities")
+                return false
+            }
+            if (activity1.checked) {
+                tempActivityValue += activity1.value + ', '
+
+            }
+            if (activity2.checked) {
+                tempActivityValue += activity2.value + ', '
+
+            }
+            if (activity3.checked) {
+                tempActivityValue += activity3.value + ', '
+
+            }
+            if (activity4.checked) {
+                tempActivityValue += activity4.value + ', '
+
+            }
+            if (activity5.checked) {
+                tempActivityValue += activity5.value + ', '
+
+            }
+
+            activityPreviewValue.innerHTML = tempActivityValue.substring(0, tempActivityValue.length - 2)
+            console.log(activity1.value)
+            return true
+        }
+
+
+        function handleIndustries() {
+            var industriesValue = document.getElementById("industries")
+
+            console.log(industriesValue.value)
+            var industriesPreviewValue = document.getElementById("industriesPreviewValue")
+            industriesPreviewValue.innerHTML = industriesValue.value
+        }
+
+        function handleLocation() {
+            var locationValue = document.getElementById("location")
+
+            var result = [];
+            var options = locationValue && locationValue.options;
+            var opt;
+
+            for (var i = 0, iLen = options.length; i < iLen; i++) {
+                opt = options[i];
+
+                if (opt.selected) {
+                    result.push(opt.value || opt.text);
+                }
+            }
+            let preview_value = ''
+            result.map((item) => {
+                preview_value += item + ', '
+            })
+            console.log('multiple select', result)
+            var locationPreviewValue = document.getElementById("locationPreviewValue")
+            locationPreviewValue.innerHTML = preview_value.substring(0, preview_value.length - 2)
+        }
+
+
+
+        function handleFundingSource() {
+            var ele = document.getElementsByName('investment-type');
+
+            for (i = 0; i < ele.length; i++) {
+                console.log(ele[i].checked)
+                if (ele[i].checked)
+                    document.getElementById("fundingSourcePreview").innerHTML
+                        = ele[i].value;
+            }
+        }
+
+        function handleBudget() {
+            var budget = document.getElementById('Budget').value
+            document.getElementById('budgetPreview').innerHTML = budget
+        }
+
+        function handlePersonal() {
+            var name = document.getElementById('fullname').value
+            var mobile = document.getElementById('mobile').value
+
+            var zip_code = document.getElementById('zip_code').value
+            if (/^\d{6}?$/.test(zip_code)) {
+
+                document.getElementById('zipCodePreview').innerHTML = zip_code
+            }
+            else {
+                alert("invalid zip code")
+                return false
+            }
+            if (/^\d{10}?$/.test(mobile)) {
+
+                document.getElementById('mobilePreview').innerHTML = mobile
+
+            }
+            else {
+                alert("invalid mobile number")
+                return false
+            }
+            document.getElementById('fullNamePreview').innerHTML = name
+
+
+
+
+            // document.getElementById('profilePicPreview').src = profile_pic
+
+            return true
+
+            // console.log(name, mobile, zip_code)
+            // document.getElementById('namePreview').innerHTML = mobile
+
+
+
+        }
+
+
+        function handleSkills() {
+
+            var companyName = document.getElementById('companyName').value
+            document.getElementById('companyNamePreview').innerHTML = companyName
+            if (tags.length > 0) {
+
+                let tempSkills = ''
+                tags.map((skill) => {
+                    tempSkills += skill + ', '
+                })
+                document.getElementById('skillPreview').innerHTML = tempSkills.substring(0, tempSkills.length - 2)
+
+            }
+            else {
+                alert('enter skills')
+                return false
+            }
+            return true
+        }
+        function handlePreview() {
+
+            handleActivities()
+            handleIndustries()
+            handleLocation()
+            handleFundingSource()
+            handleBudget()
+            handleSkills()
+            if (handlePersonal() && handleActivities() && handleSkills()) {
+                preview.style.display = "block";
+
+                contentForm.style.display = "none";
+            }
+
+
+        }
+
+        function showPreview(e) {
+
+            console.log(e)
+            handlePreview()
+
+
+
+        }
+        function hidePreview() {
+
+
+            preview.style.display = "none";
+            contentForm.style.display = "block";
+
+        }
+
+
+        function resetForm() {
+            details_form.reset()
+            hidePreview()
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
